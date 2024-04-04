@@ -1,6 +1,5 @@
 # SQL-Queries
 
-Certainly! Here are **some essential SQL Server queries** that every developer should be familiar with:
 
 1. **Create Table**: To create a new table in SQL Server, use the following syntax:
     ```sql
@@ -101,7 +100,6 @@ Certainly! Here are **some essential SQL Server queries** that every developer s
         JOIN sys.tables t ON c.object_id = t.object_id;
         ```
 
-Certainly! Let's explore examples for various SQL queries and commands in Microsoft SQL Server:
 
 1. **SELECT Query**:
     - Retrieve all rows and columns from the `Product` table:
@@ -195,9 +193,6 @@ Certainly! Let's explore examples for various SQL queries and commands in Micros
         WHERE ProductSubcategoryID = 1;
         ```
 
-Feel free to explore and adapt these examples to your specific scenarios! 🚀
-
-Source: Conversation with Bing, 4/2/2024
 (1) SELECT examples (Transact-SQL) - SQL Server | Microsoft Learn. https://learn.microsoft.com/en-us/sql/t-sql/queries/select-examples-transact-sql?view=sql-server-ver16.
 (2) Queries - SQL Server | Microsoft Learn. https://learn.microsoft.com/en-us/sql/t-sql/queries/queries?view=sql-server-ver16.
 (3) SQL Commands: The Complete List (w/ Examples) – Dataquest. https://www.dataquest.io/blog/sql-commands/.
