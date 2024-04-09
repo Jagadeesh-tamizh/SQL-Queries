@@ -17,6 +17,23 @@ GO
 USE TrainOps;
 GO
 
+-- Create the Users table
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY,
+    PhoneNumber BIGINT,
+    Username VARCHAR(255),
+    Password VARBINARY(64),
+    Role VARCHAR(50)
+);
+
+-- Create the Stations table
+CREATE TABLE Stations (
+    StationID INT PRIMARY KEY,
+    StationName VARCHAR(255),
+    Location VARCHAR(255),
+    IsRunning BIT
+);
+
 -- Create the Trains table
 CREATE TABLE Trains (
     TrainID INT PRIMARY KEY,
@@ -27,12 +44,13 @@ CREATE TABLE Trains (
     IsUnderMaintenance BIT
 );
 
--- Create the Stations table
-CREATE TABLE Stations (
-    StationID INT PRIMARY KEY,
-    StationName VARCHAR(255),
-    Location VARCHAR(255),
-    IsRunning BIT
+-- Create the RouteIDs table
+CREATE TABLE RouteIDs (
+    RouteID INT PRIMARY KEY,
+    SourceStationID INT,
+    DestinationStationID INT,
+    FOREIGN KEY (SourceStationID) REFERENCES Stations(StationID),
+    FOREIGN KEY (DestinationStationID) REFERENCES Stations(StationID)
 );
 
 -- Create the TrainSchedules table
@@ -50,39 +68,31 @@ CREATE TABLE TrainSchedules (
     IsThirdClassPresent BIT,
     FOREIGN KEY (TrainID) REFERENCES Trains(TrainID),
     FOREIGN KEY (SourceStationID) REFERENCES Stations(StationID),
-    FOREIGN KEY (DestinationStationID) REFERENCES Stations(StationID)
-    -- FOREIGN KEY (RouteID) REFERENCES RouteIDs(RouteID)  -- Uncomment if RouteIDs table is created first
-);
-
--- Create the TrainSeats table
-CREATE TABLE TrainSeats (
-    TrainID INT,
-    BookedFirstClass INT,
-    BookedSecondClass INT,
-    BookedThirdClass INT,
-    FOREIGN KEY (TrainID) REFERENCES Trains(TrainID)
+    FOREIGN KEY (DestinationStationID) REFERENCES Stations(StationID),
+    FOREIGN KEY (RouteID) REFERENCES RouteIDs(RouteID)
 );
 
 -- Create the TrainRoutes table
 CREATE TABLE TrainRoutes (
-    RouteID INT PRIMARY KEY,
-    TrainID INT,
+    RouteID INT,
     StationID INT,
     StopOrder INT,
     JourneyTime TIME,
     HasStopping BIT,
-    FOREIGN KEY (TrainID) REFERENCES Trains(TrainID),
+    PRIMARY KEY (RouteID, StationID),
+    FOREIGN KEY (RouteID) REFERENCES RouteIDs(RouteID),
     FOREIGN KEY (StationID) REFERENCES Stations(StationID)
 );
 
--- Create the RouteIDs table
-CREATE TABLE RouteIDs (
-    RouteID INT PRIMARY KEY,
-    SourceStationID INT,
-    DestinationStationID INT,
-    FOREIGN KEY (SourceStationID) REFERENCES Stations(StationID),
-    FOREIGN KEY (DestinationStationID) REFERENCES Stations(StationID)
+-- Create the TrainSeats table with a composite primary key
+CREATE TABLE TrainSeats (
+    TrainID INT,
+    ClassType VARCHAR(20), 
+    BookedSeats INT,
+    PRIMARY KEY (TrainID, ClassType),
+    FOREIGN KEY (TrainID) REFERENCES Trains(TrainID)
 );
+
 
 -- Create the Bookings table
 CREATE TABLE Bookings (
@@ -110,15 +120,6 @@ CREATE TABLE Notifications (
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
--- Create the Users table
-CREATE TABLE Users (
-    UserID INT PRIMARY KEY,
-    PhoneNumber BIGINT,
-    Username VARCHAR(255),
-    Password VARBINARY(64),
-    Role VARCHAR(50)
-);
-
 -- Create the Reports table
 CREATE TABLE Reports (
     ReportID INT PRIMARY KEY,
@@ -126,5 +127,6 @@ CREATE TABLE Reports (
     ReportDate DATETIME,
     Details TEXT
 );
+
 
 PRINT 'Tables created successfully.';
