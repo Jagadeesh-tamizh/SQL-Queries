@@ -33,7 +33,7 @@ INSERT INTO Stations (StationID, StationName, Location, IsRunning) VALUES
 (6, 'Station F', 'City R', 1),
 (7, 'Station G', 'City S', 1),
 (8, 'Station H', 'City T', 1),
-(9, 'Station I', 'City U', 1);
+(9, 'Station I', 'City U', 1),
 (10,'Station J', 'City V', 1);
 
 -- Insert data into Notifications table
