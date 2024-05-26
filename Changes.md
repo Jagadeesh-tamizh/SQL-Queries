@@ -17,7 +17,7 @@ Here's a breakdown of the method-level changes based on the provided information
   - `CheckValidCourseId`: Created method to check whether a CourseID is present in the COURSEDETAILS table.
   - `AssignCourseToInstructor`: Created method to assign a course to the instructor while registering into the application.
 
-- **FormDBOperation.cs**
+- **ForumDBOperation.cs**
   - `SelectForumMessages`: Created method to fetch the top 100 messages of corresponding session.
   - `InsertForumMessage`: Created method to insert the message into the corresponding session.
 
@@ -31,7 +31,7 @@ Here's a breakdown of the method-level changes based on the provided information
 
 ### Navigation
 - **HubstreamFinEduNavigation.cs**
-  - `CollectStudentInformationAsync`, `ValidatePlace`, `CollectUserInformationAsync`: Input parameters fixed.
+  - `CollectStudentInformationAsync`, `ValidatePlace`, `CollectUserInformationAsync`: Input format and validations fixed.
   - `UserRegisterAsync`: Added functionality to let the instructor select his course with dynamic validation of course.
 
 - **InstructorNavigation.cs**
