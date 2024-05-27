@@ -44,6 +44,8 @@
 - **OrganiserNavigation.cs**
   - Fixed Table output in the `ViewSessionForOrganiser` method.
   - Added functionality to display list of Courses, Instructors, Batched in `SessionSectionAsync` for ease of input entry by organizer.
+- **StudentNavigation.cs**
+  - Added method `AdditionalResourcesAsync` to display list of external additional resources from the internet.
 
 ### TableParticulator
 - Created new model `ForumPost`.
