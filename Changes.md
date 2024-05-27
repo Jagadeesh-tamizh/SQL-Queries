@@ -53,4 +53,3 @@
 ### DATABASE
 - Created new Table `ForumPosts`.
 
-These method-level changes provide a detailed overview of the modifications made within each module or class.
