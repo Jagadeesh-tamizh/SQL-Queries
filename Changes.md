@@ -4,7 +4,10 @@
 - **AzureMyModule**
   - `FileUploadMethodAsync`: Created method to upload files.
   - `DownloadFileAsync`: Created method to download files.
-
+### OnlineCourses
+- **CourseProviders.cs**
+  - `DisplayCourses`: Created method to display available courses from fetched data.
+  - `FetchProviders`: Created method to fetch JSON data from the external API.
 ### DBService
 - **ForumDBOperations.cs**
   - `SelectForumMessagesAsync`: Created method to fetch forum messages for a particular session.
