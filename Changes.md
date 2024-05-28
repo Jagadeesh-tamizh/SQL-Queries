@@ -1,6 +1,7 @@
 # PATCH 2.0
 - **AUTHOR** `Jagadeesh T`
 - **Changes to be made in** `App.config`
+  
   ```xml
      <!-- INSIDE THE App.config add the below configuration settings -->
     <appSettings>
@@ -12,6 +13,14 @@
 	    <add key="ApiUrl" value="http://localhost:5000/providers"/>
     </appSettings>
    ```
+- **Package to be installed**
+  - Open `Tools` > `Nugget Package Manager` > `Nugget Package Manager Console`
+    
+   ```console
+   	Install-Package Newtonsoft.Json
+
+   ```
+   
 - **STEPS TO CREATE JSON SERVER FOR ADDITIONAL RESOURCES**
   - Create a new folder and open terminal.
   - make sure `node` and `npm` is already installed.
@@ -306,7 +315,9 @@
     
 # PATCH NOTES: 
    
-
+### App Configuration
+- Added configuration in `App.config` file.
+- 
 ### AzureStorage
 - **AzureMyModule**
   - `FileUploadMethodAsync`: Created method to upload files.
@@ -359,6 +370,10 @@
   - Added functionality to display list of Courses, Instructors, Batched in `SessionSectionAsync` for ease of input entry by organizer.
 - **StudentNavigation.cs**
   - Added method `AdditionalResourcesAsync` to display list of external additional resources from the internet.
+  - 
+### SQLQuery
+- Created new Folder `UTILS` which contains predefined queries to help the user.
+- Created `HubstreamEducationStoredProcedureForLocalTableExport.sql` which helps to download tables as `.csv` files.
 
 ### TableParticulator
 - Created new model `ForumPost`.
