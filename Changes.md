@@ -25,6 +25,8 @@
   - `InsertForumMessage`: Created method to insert the message into the corresponding session.
 - **StudentDBOperation.cs**
   - `SelectStudentsOfCurrentSession`: Created method to fetch the students of a particular session.
+- **SessionDBOperation.cs**
+  - `RescheduleSessionAsync`: Created method to Reschedule the Existing session to another date.
 
 - **UserDBOperation.cs**
   - `CheckUserAlreadyExistsAsync`: Created method to check whether a User already exists in the database.
