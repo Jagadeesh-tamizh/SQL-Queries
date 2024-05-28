@@ -27,6 +27,7 @@
   - `SelectStudentsOfCurrentSession`: Created method to fetch the students of a particular session.
 - **SessionDBOperation.cs**
   - `RescheduleSessionAsync`: Created method to Reschedule the Existing session to another date.
+  - `CompleteSessionAsync`: Created method to mark a session is completed.
 
 - **UserDBOperation.cs**
   - `CheckUserAlreadyExistsAsync`: Created method to check whether a User already exists in the database.
