@@ -1,4 +1,21 @@
-
+# PATCH 2.0
+- **AUTHOR** `Jagadeesh T`
+-  ```txt
+    - IMPROVED OVERALL APPLICATION
+    ```
+-  ```xml
+     <!-- INSIDE THE App.config add the below configuration settings -->
+    <appSettings>
+	    <!-- Path here corresponding where .csv files present -->
+	    <add key="BackUpFilePath" value="C:\Developers\{DEVELOPER_NAME}\HubstreamFinancePlatform\HubstreamFinancePlatform\Log"/>
+	    <!-- Required azure blob container name -->
+	    <add key="BackUpContainerName" value="hubstreamfinanceplatform"/>
+	    <!-- Base URL of the JSON provider -->
+	    <add key="ApiUrl" value="http://localhost:5000/providers"/>
+    </appSettings>
+   ```
+# PATCH NOTES: 
+   
 
 ### AzureStorage
 - **AzureMyModule**
