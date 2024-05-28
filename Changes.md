@@ -23,6 +23,8 @@
 - **ForumDBOperation.cs**
   - `SelectForumMessages`: Created method to fetch the top 100 messages of corresponding session.
   - `InsertForumMessage`: Created method to insert the message into the corresponding session.
+- **StudentDBOperation.cs**
+  - `SelectStudentsOfCurrentSession`: Created method to fetch the students of a particular session.
 
 - **UserDBOperation.cs**
   - `CheckUserAlreadyExistsAsync`: Created method to check whether a User already exists in the database.
@@ -40,6 +42,7 @@
 - **InstructorNavigation.cs**
   - Added functionality to display the list of assignments in `AssignmentSection` for ease of session selection.
   - Added functionality to display the list of completed assignments in `AssignmentSection` for ease of assignment selection.
+  - Added functionality to display the list of Students of the particular session `ViewStudentTableOfSession` for ease of student selection.
 
 - **OrganiserNavigation.cs**
   - Fixed Table output in the `ViewSessionForOrganiser` method.
