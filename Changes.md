@@ -287,21 +287,23 @@
  
     ```
   - Update `package.json` file
-    ```
-    {
-  	"scripts": {
-    	"server": "json-server --watch db.json --port 5000"
-  	},
-  	"dependencies": {
-    		"json-server": "^1.0.0-beta.0"
-  	}
-    }
+    ```json
+	{
+		"scripts": {
+			"server": "json-server --watch db.json --port 5000"
+  		},
+  		"dependencies": {
+			"json-server": "^1.0.0-beta.0"
+  		}
+	}
     
     ```
   - Open terminal and run
     ```node
     npm run server
     ```
+  - Open `http://localhost:5000/providers/` and ensure the payload is received.
+    
 # PATCH NOTES: 
    
 
