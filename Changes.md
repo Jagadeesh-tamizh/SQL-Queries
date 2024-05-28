@@ -53,6 +53,11 @@
 ### TableParticulator
 - Created new model `ForumPost`.
 
+### Utility
+- **SystemAdmin.cs**
+  - Created new method `GetTablesFromDatabaseAsync`.
+  - Created new mehtod `MoveFilesToCloudAsync` to move csv files from local to storage one by one.
+
 ### DATABASE
 - Created new Table `ForumPosts`.
 
