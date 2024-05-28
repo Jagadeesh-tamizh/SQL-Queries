@@ -317,7 +317,7 @@
    
 ### App Configuration
 - Added configuration in `App.config` file.
-- 
+  
 ### AzureStorage
 - **AzureMyModule**
   - `FileUploadMethodAsync`: Created method to upload files.
