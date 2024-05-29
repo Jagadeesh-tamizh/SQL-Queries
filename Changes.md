@@ -350,6 +350,7 @@
 - **UserDBOperation.cs**
   - `CheckUserAlreadyExistsAsync`: Created method to check whether a User already exists in the database.
   - `FindUserIdWithUserName`: Created method to find the UserID of the user with username.
+  - Added SHA1 Hashing for passwords in `ValidateUserLoginAsync` and `CreateUserAsync` to store and validate passwords with hashin. 
 
 ### HFPJobModule
 - **JobSchedule**
